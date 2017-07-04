@@ -38,6 +38,14 @@ public class Strings {
         String str2 = new String("str") + new String("01");
         str2.intern();
         System.out.println(str2 == str1);//#8
+
+
+        String greeting = "Hello";
+        //代码点的位置，由于unicode字符65535
+        //在unicode的世界中，每种字符都有一个唯一的数字编号，这个数字编号就叫unicode code point。目前code point的数值范围是0~0x10FFFF，也就是一共可以表示1114112种不同的字符。
+        //由于code point的数值范围比较尴尬，直接用四字节的long类型来存储太浪费空间，直接用双字节的char类型来存储又存不下。最终有个折衷方案，数值范围较小的code point用一个char存储，数字范围较大的code point用两个char来存储。所以一个char就叫一个code unit，而这种方案就叫utf-16。//
+        int cpCount = greeting.codePointCount(0, greeting.length());
+        System.out.println(cpCount);
     }
 
 }
