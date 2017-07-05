@@ -79,9 +79,9 @@ public class Strings {
 
         String th = "let's begin";
         //System.out.println(th.charAt('b'));
-        char[] chars = new char[10];
+        char[] chars1 = new char[10];
         th.getChars(0, 3, chars,0);
-        System.out.println(Arrays.toString(chars));
+        System.out.println(Arrays.toString(chars1));
         System.out.println(th.substring(2,6).length());
     }
 
