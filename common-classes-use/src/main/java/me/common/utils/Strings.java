@@ -1,9 +1,16 @@
 package me.common.utils;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  * Created by g on 2017/7/4 15:29.
  *
  * @星期二
+ *
+ * @see http://www.cnblogs.com/paddix/p/5326863.html 通过反编译深入理解Java String及intern
+ *
+ * @see http://www.importnew.com/14142.html          深入解析String#intern
  */
 public class Strings {
     // 测试string 相等
@@ -39,13 +46,38 @@ public class Strings {
         str2.intern();
         System.out.println(str2 == str1);//#8
 
-
+        /**************************************************************************/
         String greeting = "Hello";
         //代码点的位置，由于unicode字符65535
         //在unicode的世界中，每种字符都有一个唯一的数字编号，这个数字编号就叫unicode code point。目前code point的数值范围是0~0x10FFFF，也就是一共可以表示1114112种不同的字符。
         //由于code point的数值范围比较尴尬，直接用四字节的long类型来存储太浪费空间，直接用双字节的char类型来存储又存不下。最终有个折衷方案，数值范围较小的code point用一个char存储，数字范围较大的code point用两个char来存储。所以一个char就叫一个code unit，而这种方案就叫utf-16。//
         int cpCount = greeting.codePointCount(0, greeting.length());
         System.out.println(cpCount);
+
+        /********************************   a.compareTo(String other)     ******************************************/
+
+        /*  比较unicode 字典顺序，如果 用 a - other 返回数值，负数（<0）则说明 a位于 other 之前
+        *   反之则说明位于之后 ，等于0则相等
+        *
+        * */
+
+        System.out.println("a".compareTo("d"));// -3
+
+
+        /********************************   public String(char[] a, int off ,int length)     ******************************************/
+        char[] chars = {'h', 'e', 'l', 'l', 'o', 'j', 'a', 'v', 'a'};
+        String helloJava = new String(chars);
+        //offset 是从第一个字符的下标索引开始的
+        String java_ = new String(chars,5, 4);
+        helloJava.intern();
+        String hellojava = "hellojava";
+        System.out.println(helloJava == hellojava);
+        //copyOf
+
+        System.out.println(Arrays.toString(Arrays.copyOf(chars, 2)));
+
+
+
     }
 
 }
