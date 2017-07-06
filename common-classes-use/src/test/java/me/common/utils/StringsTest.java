@@ -1,3 +1,4 @@
+package me.common.utils;
 
 import org.junit.Test;
 
