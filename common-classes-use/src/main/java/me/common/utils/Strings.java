@@ -76,13 +76,32 @@ public class Strings {
         System.out.println(Arrays.toString(Arrays.copyOf(chars, 2)));
 
 
+        /********************************   substring(int begin, int end) ******************************************/
 
+        /**
+         *  截取字符串 ，从 开始索引到结束的索引
+         *
+         *  beginIndex   the beginning index, inclusive.包含开始索引，
+         *
+         *  the ending index, exclusive  不包含结束索引
+         *
+         *  例如hello　0-h-1-e-2-l-3-l-4-o
+         *
+         *  ºH  ¹Ｅ　  ² Ｌ³  L⁴　Ｏ
+         *
+         */
         String th = "let's begin";
         //System.out.println(th.charAt('b'));
         char[] chars1 = new char[10];
         th.getChars(0, 3, chars,0);
         System.out.println(Arrays.toString(chars1));
         System.out.println(th.substring(2,6).length());
+
+        /********************************   valueOf 和toString 和（String） obj  ********************************/
+        Integer obj = new Integer(100);
+        //String strVal = (String)obj; 错误代码
+        String nulls = (String) null;
+        System.out.println(nulls);
     }
 
 }
