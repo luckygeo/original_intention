@@ -6,7 +6,6 @@
 
     <groupId>me.common</groupId>
     <artifactId>common-classes-use</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <parent>
         <groupId>me.test</groupId>
         <artifactId>pom</artifactId>
