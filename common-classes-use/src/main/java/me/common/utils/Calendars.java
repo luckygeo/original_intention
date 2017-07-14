@@ -15,10 +15,12 @@ public class Calendars {
     /**
      * 简单格式化日期
      *
-     * @param date
-     *          要格式化的日期
-     * @param pattern
-     *          格式化的规则 "yyyy-MM-dd HH:mm:ss"
+     * @param  date
+     *         要格式化的日期
+     *
+     * @param  pattern
+     *         格式化的规则 "yyyy-MM-dd HH:mm:ss"
+     *
      */
     public String simplFormat(Date date, String pattern){
         return new SimpleDateFormat(pattern).format(date);

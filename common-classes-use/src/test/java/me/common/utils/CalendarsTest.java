@@ -26,7 +26,7 @@ public class CalendarsTest {
     @Test
     public void simplFormat() throws Exception {
         Date date = null;
-        assertEquals("2017-07-06",calendars.simplFormat(new Date(), "yyyy-MM-dd"));
+        assertEquals("2017-07-07",calendars.simplFormat(new Date(), "yyyy-MM-dd"));
 
     }
 
