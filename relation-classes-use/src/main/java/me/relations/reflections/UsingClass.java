@@ -8,6 +8,7 @@ import java.util.Arrays;
  *          2.在运行中查看对象，例如编写一个toString 提供所有类使用
  *          3.实现数组的操作代码
  *          4.利用method对象
+ * @see <a href="http://blog.csdn.net/smartboy_01/article/details/23201391"></a>
  */
 public class UsingClass {
 
