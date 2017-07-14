@@ -7,9 +7,9 @@ import java.util.Arrays;
  *
  * @星期二
  *
- * @see http://www.cnblogs.com/paddix/p/5326863.html 通过反编译深入理解Java String及intern
+ * @see <a href="http://www.cnblogs.com/paddix/p/5326863.html"></a> 通过反编译深入理解Java String及intern
  *
- * @see http://www.importnew.com/14142.html          深入解析String#intern
+ * @see <a href="http://www.importnew.com/14142.html" ></a>         深入解析String#intern
  */
 public class Strings {
     // 测试string 相等
