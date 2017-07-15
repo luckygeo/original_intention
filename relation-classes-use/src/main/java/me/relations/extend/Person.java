@@ -21,5 +21,9 @@ public abstract class Person {
 
     private String name;
 
+    public void speaks(String msg) {
+        System.out.println(msg);
+    }
+
 
 }
