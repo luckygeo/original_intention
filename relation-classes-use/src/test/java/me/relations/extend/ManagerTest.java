@@ -19,7 +19,9 @@ public class ManagerTest {
 
     @Test
     public void castClass() throws Exception {
+        //类的初始化(包括static块的运行和static成员变量的赋值)只运行一次，
         Manager boss = new Manager();
+        Manager boss2 = new Manager();
         Employee[] employees = new Employee[3];
         employees[0] = boss;
         employees[1] = new Employee("gao", 90);
