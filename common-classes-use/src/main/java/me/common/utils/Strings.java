@@ -5,8 +5,6 @@ import java.util.Arrays;
 /**
  * Created by g on 2017/7/4 15:29.
  *
- * @星期二
- *
  * @see <a href="http://www.cnblogs.com/paddix/p/5326863.html"></a> 通过反编译深入理解Java String及intern
  *
  * @see <a href="http://www.importnew.com/14142.html" ></a>         深入解析String#intern
