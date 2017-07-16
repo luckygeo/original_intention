@@ -3,17 +3,10 @@ package me.common.utils;
 import me.common.Model;
 
 /**
- * Created by tgs on 2017/7/14 18:08.
- *
+ * Created on 2017/7/14 18:08.
  * 注 hashcode 默认是对象的存储地址
- *
  * String 重写的equals 和 hashcode 方法 ,
- *
- *
- *
- *
- *
- * @星期五
+ * empty string hashCode = 0;
  */
 public class HashCodes {
     public static void main(String[] args) {
@@ -27,11 +20,9 @@ public class HashCodes {
         System.out.println(stringBuffer2.hashCode());
         Model m1 = new Model();
         Model m2 = new Model();
-        System.out.println(m1.hashCode()  );
-        System.out.println(m2.hashCode()  );
+        System.out.println(m1.hashCode());
+        System.out.println(m2.hashCode());
         String dd = "";
         System.out.println("".hashCode());
-
     }
-
 }
