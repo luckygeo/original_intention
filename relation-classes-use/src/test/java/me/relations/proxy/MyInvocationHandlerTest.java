@@ -1,12 +1,10 @@
-package me.relations.Proxy;
+package me.relations.proxy;
 
 import me.relations.interfaces.UserService;
 import org.junit.Test;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by gao on 2017/7/16 14:44.

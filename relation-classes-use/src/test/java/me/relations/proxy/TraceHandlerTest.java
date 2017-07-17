@@ -1,4 +1,4 @@
-package me.relations.Proxy;
+package me.relations.proxy;
 
 import org.junit.Test;
 
@@ -6,8 +6,6 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
 import java.util.Random;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by gao on 2017/7/16 11:52.
