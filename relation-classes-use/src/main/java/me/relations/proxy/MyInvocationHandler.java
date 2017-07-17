@@ -1,4 +1,4 @@
-package me.relations.Proxy;
+package me.relations.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

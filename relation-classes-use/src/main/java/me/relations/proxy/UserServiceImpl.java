@@ -1,4 +1,4 @@
-package me.relations.Proxy;
+package me.relations.proxy;
 
 import me.relations.interfaces.UserService;
 
