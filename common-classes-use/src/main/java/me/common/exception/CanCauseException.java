@@ -2,8 +2,7 @@ package me.common.exception;
 
 /**
  * Created by  on 2017/7/13 11:33.
- *
- * @星期四
+ * 异常可能发生的情况
  */
 public class CanCauseException {
 
