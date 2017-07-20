@@ -10,6 +10,7 @@ public class Vedio implements Runnable {
     public void run() {
         System.out.println("vedio run");
         for (int i = 0; i < 1000; i++) {
+            System.out.println(Thread.currentThread().getName());
             System.out.println("playing vedio!");
         }
 

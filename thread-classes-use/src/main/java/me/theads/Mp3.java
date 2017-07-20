@@ -9,7 +9,8 @@ public class Mp3 implements Runnable{
     @Override
     public void run() {
         System.out.println("mp3 run");
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100000; i++) {
+            System.out.println(Thread.currentThread().getName());
             System.out.println("mp3 playing!");
         }
 
