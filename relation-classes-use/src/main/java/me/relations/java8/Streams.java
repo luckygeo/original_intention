@@ -135,7 +135,9 @@ public class Streams {
 
 
             //reduce
-                //这个方法的主要作用是把 Stream 元素组合起来。它提供一个起始值（种子），然后依照运算规则（BinaryOperator），和前面 Stream 的第一个、第二个、第 n 个元素组合。从这个意义上说，字符串拼接、数值的 sum、min、max、average 都是特殊的 reduce。例如 Stream 的 sum 就相当于
+                //这个方法的主要作用是把 Stream 元素组合起来。它提供一个起始值（种子），然后依照运算规则（BinaryOperator），
+                //和前面 Stream 的第一个、第二个、第 n 个元素组合。
+                //从这个意义上说，字符串拼接、数值的 sum、min、max、average 都是特殊的 reduce。例如 Stream 的 sum 就相当于
                 //Integer sum = integers.reduce(0, (a, b) -> a+b); 或
                 //Integer sum = integers.reduce(0, Integer::sum);
                 //也有没有起始值的情况，这时会把 Stream 的前面两个元素组合起来，返回的是 Optional。
