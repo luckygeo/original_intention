@@ -5,6 +5,7 @@ import me.relations.extend.Manager;
 import org.junit.Test;
 
 import java.lang.reflect.Array;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -113,6 +114,25 @@ public final class UsingClassTest extends Object{
         Method getSalaryMethod = m.getClass().getMethod("getSalary");
         Double d = (double) getSalaryMethod.invoke(m);
         System.out.println(d);
+
+    }
+
+    /**
+     * 测试通构造器生成有参数的对象
+     */
+    @Test
+    public void testConstructor() throws Exception {
+        Constructor[] constructors = Employee.class.getConstructors();
+        for (Constructor constructor : constructors) {
+            System.out.println(Modifier.toString(constructor.getModifiers()));
+            System.out.println(constructor.getName());
+
+            Class[] cls = constructor.getParameterTypes();
+            Arrays.toString(cls);
+            System.out.println(constructor.toString());
+        }
+
+
 
     }
 
