@@ -6,12 +6,19 @@ package me.theads;
  * @星期日
  */
 public class MVRuning {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception{
+
+        System.out.println(Thread.currentThread().getName());
         Runnable mp3 = new Mp3();
         Runnable vedio = new Vedio();
         Thread playMp3 = new Thread(mp3);
         Thread playVedio = new Thread(vedio);
+        playMp3.setName("================");
         playMp3.start();
         playVedio.start();
+        Thread.sleep(5000);
+        System.out.println("------------------------------"+playMp3.isAlive());
+
     }
 }
